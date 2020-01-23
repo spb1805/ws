@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxws:bindings
+	wsdlLocation="D:/workspace-spring-tool-suite-4-4.5.0.RELEASE/wsDemo/src/main/resources/wsdl/CustomerTestServices.wsdl"
+	xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" version="2.1"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<jaxws:bindings
+		node="wsdl:definitions/wsdl:types/xs:schema[@targetNamespace='type']">
+		<jaxb:schemaBindings>
+			<jaxb:nameXmlTransform>
+				<jaxb:elementName suffix="Elem" />
+			</jaxb:nameXmlTransform>
+		</jaxb:schemaBindings>
+	</jaxws:bindings>
+</jaxws:bindings>

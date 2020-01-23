@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://util.netimex" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://util.netimex" xmlns:intf="http://util.netimex" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://util.netimex" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="setCustomerData">
+    <complexType>
+     <sequence>
+      <element name="customerDataTest" type="impl:CustomerDataTest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="CustomerDataTest">
+    <sequence/>
+   </complexType>
+   <element name="setCustomerDataResponse">
+    <complexType>
+     <sequence>
+      <element name="setCustomerDataReturn" type="impl:SetCustomerDataResponse"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="SetCustomerDataResponse">
+    <sequence/>
+   </complexType>
+   <element name="getCustomerData">
+    <complexType>
+     <sequence>
+      <element name="getCustDataRequest" type="impl:GetCustomerDataRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="GetCustomerDataRequest">
+    <sequence/>
+   </complexType>
+   <element name="getCustomerDataResponse">
+    <complexType>
+     <sequence>
+      <element name="getCustomerDataReturn" type="impl:CustomerDataTest"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="setCustomerDataResponse">
+
+      <wsdl:part element="impl:setCustomerDataResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCustomerDataRequest">
+
+      <wsdl:part element="impl:getCustomerData" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCustomerDataResponse">
+
+      <wsdl:part element="impl:getCustomerDataResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCustomerDataRequest">
+
+      <wsdl:part element="impl:setCustomerData" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="CustomerTestServices">
+
+      <wsdl:operation name="setCustomerData">
+
+         <wsdl:input message="impl:setCustomerDataRequest" name="setCustomerDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setCustomerDataResponse" name="setCustomerDataResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCustomerData">
+
+         <wsdl:input message="impl:getCustomerDataRequest" name="getCustomerDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCustomerDataResponse" name="getCustomerDataResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="CustomerTestServicesSoapBinding" type="impl:CustomerTestServices">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="setCustomerData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setCustomerDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setCustomerDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCustomerData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCustomerDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCustomerDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CustomerTestServicesService">
+
+      <wsdl:port binding="impl:CustomerTestServicesSoapBinding" name="CustomerTestServices">
+
+         <wsdlsoap:address location="http://localhost:8080/allNETTClient/services/CustomerTestServices"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
