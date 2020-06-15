@@ -19,7 +19,7 @@
 		<java.version>1.8</java.version>
 		<maven-jaxb2-plugin.version>0.14.0</maven-jaxb2-plugin.version>
 		<org.projectlombok.version>1.14.8</org.projectlombok.version>
-		<commons-collections.version>3.2.1</commons-collections.version>
+		<commons-collections.version>3.2.2</commons-collections.version>
 	</properties>
 	<dependencies>
 		<dependency>
